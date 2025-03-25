@@ -8,10 +8,12 @@ const ThemeProvider = ({ children }) => {
     setTheme((theme) => (theme == "light" ? "dark" : "light"));
     localStorage.setItem("theme", theme == "light" ? "dark" : "light");
   };
+
   const themeFeatures = {
     theme,
     toggleTheme,
   };
+
   return (
     <div data-theme={theme} className="duration-1000">
       <ThemeContext value={themeFeatures}>{children}</ThemeContext>
